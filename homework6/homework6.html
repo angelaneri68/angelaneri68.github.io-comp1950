@@ -1,0 +1,195 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<!--
+Angela Neri - A01168609
+Homework 6 - June 18 2019
+-->
+<head>
+    <title>Homework 06</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Scripts to use the gallery  -->
+    <script src="js/jquery.js" type="text/javascript"></script>
+    <script src="js/portfolio.js" type="text/javascript"></script>
+    <script src="js/init.js" type="text/javascript"></script>
+    <style>
+    </style>
+</head>
+<body>
+    <div id="container">
+        <!--
+            HEADER
+
+        -->
+        <header>
+            <p class="head">Homework 06</p>
+        </header>
+        <!--
+            MENU
+        -->
+        <nav>
+            <ul id="menu_vert">
+                <li><a class="nav_link" href="#image_rot">Cube Rotation</a></li>
+                <li><a class="nav_link" href="#portf">Portfolio Viewer</a></li>
+            </ul>
+        </nav>
+
+        <main>
+
+
+            <section>
+
+                <h1>Using frameworks and plugins</h1>
+
+
+                <div>
+
+
+                    <article id="image_rot" class="article_layout">
+
+                        <h2>Rotating Cube</h2>
+                        <p> The three.js is a framework to create scenes and animations </p>
+                        <p> More information can be found here <a class ="ext_link"="https://threejs.org/">threejs.org</a></p>
+                        <p> I adapted it to append a child in the article (original was appended into the body). I changed some 
+                        parameters as widht and heigth of the scene, and cube size and color.</p>
+                        <script src="js/three.js"></script>
+                        <script>
+                            var scene = new THREE.Scene();
+                            var camera = new THREE.PerspectiveCamera( 75, window.innerWidth/window.innerHeight, 0.1, 1000 );
+
+                            var renderer = new THREE.WebGLRenderer();
+
+                           //renderer.setSize( window.innerWidth, window.innerHeight );
+
+                            renderer.setSize( 800, 500 );
+
+
+                           // document.body.appendChild( renderer.domElement );
+
+                            document.getElementById("image_rot").appendChild( renderer.domElement );
+                            var geometry = new THREE.BoxGeometry( 3, 3, 3 );
+                            var material = new THREE.MeshBasicMaterial( { color: 0xff00ff } );
+                            var cube = new THREE.Mesh( geometry, material );
+                            scene.add( cube );
+
+                            camera.position.z = 5;
+
+                            var animate = function () {
+                                requestAnimationFrame( animate );
+
+                                cube.rotation.x += 0.01;
+                                cube.rotation.y += 0.01;
+
+                                renderer.render( scene, camera );
+                            };
+
+                            animate();
+                        </script>
+
+                   </article>
+
+                </div>
+
+
+
+
+                <div>
+
+
+                    <article id="portf" class="article_layout">
+
+                        <div>
+                            <h2>Portfolio Viewer</h2>
+                            <p> This framework is used to create a Portfolio Image Navigation with JQuery. </p>
+                            <p> More information can be found here <a class="ext_link" ="https://tympanus.net/codrops/2011/08/09/portfolio-image-navigation/">Tympanus codrops</a></p>
+                            <p>
+                                It was designed to cover all the screen, using fixed position (0,0), I adapted it to a division, using relative position. 
+                                I used the same pictures as demo, because they were already edited and scaled to fit the background image. 
+                                I changed the itens in the gallery tree.
+                            </p>
+
+                        </div>
+
+                        <div id="portfolio">
+                            <div id="background"></div>
+                            <div class="arrows">
+                                <a href="#" class="up">Up</a>
+                                <a href="#" class="down">Down</a>
+                                <a href="#" class="prev">Previous</a>
+                                <a href="#" class="next">Next</a>
+                            </div>
+                            <div class="gallery">
+                                <div class="inside">
+                                    <div class="item">
+                                        <div><img src="images/1.jpg" alt="image1" /></div>
+                                        <div><img src="images/2.jpg" alt="image2" /></div>
+                                        <div><img src="images/3.jpg" alt="image3" /></div>
+                                    </div>
+                                    <div class="item">
+                                        <div><img src="images/4.jpg" alt="image4" /></div>
+                                        <div><img src="images/5.jpg" alt="image5" /></div>
+                                    </div>
+                                    <div class="item">
+                                        <div><img src="images/6.jpg" alt="image6" /></div>
+                                        <div><img src="images/7.jpg" alt="image7" /></div>
+                                        <div><img src="images/8.jpg" alt="image8" /></div>
+                                        <div><img src="images/9.jpg" alt="image9" /></div>
+
+                                    </div>
+                                    <div class="item">
+                                        <div><img src="images/10.jpg" alt="image10" /></div>
+                                        <div><img src="images/11.jpg" alt="image11" /></div>
+                                        <div><img src="images/12.jpg" alt="image12" /></div>
+                                        <div><img src="images/13.jpg" alt="image13" /></div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                    </article>
+
+                </div>
+
+
+
+
+
+
+
+            </section>
+
+        </main>
+        <!-- FOOTER
+
+        -->
+        <footer>
+            <p class="head">Angela Neri</p>
+
+        </footer>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
