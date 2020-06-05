@@ -1,0 +1,479 @@
+﻿/* RESET CSS    */
+@import url("normalize.css");
+
+@charset "utf-8";
+/* Angela Neri */
+/* 2019-06-09  */
+/* Homework 05 */
+/* THE RESULT IS BETTER USING CHROME AND/OR FIREFOX  **************************************/
+
+/* colors
+
+    yellow: #FFFED4
+    dark maroon:#3D0500
+    maroon:#6A0D05
+    dark red:#97190A
+    black:#01010D
+    red:#ed2b12;
+   
+*/
+
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+
+body {
+    font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    width: 98%;
+    margin-left: auto;
+    margin-right: auto;
+    color: #FFFED4;
+    min-width: 300px;
+    background-color: #01010D;
+    font-size: 16px;
+}
+
+
+
+
+header {
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-family: 'ITC Benguiat W01';
+    font-weight: 20;
+    color: #1c0502;
+    -webkit-text-shadow: 1px 1px 1px #ed2b12, 1px 1px 1px #ed2b12;
+    text-shadow: -0.05rem -0.05rem 1px #ed2b12, 0.05rem -0.05rem 1px #ed2b12, -0.05rem 0.05rem 1px #ed2b12, 0.05rem 0.05rem 1px #ed2b12, 0 0 15px #630100, 0 0 20px #450100;
+    letter-spacing: -2px;
+
+    /* text-shadow: 1px 1px 1px #ed2b12, 1px 1px 1px #ed2b12; */
+}
+
+
+footer {
+    text-align: right;
+    color: #FFFED42;
+}
+
+
+
+nav {
+    font-size: 16px;
+    text-align:left;
+    padding-left:10px;
+
+
+
+}
+
+    nav a {
+        transition: text-shadow 0.5s ease;
+        
+        display: block;
+        font-weight: bold;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #ed2b12;
+        font-family: 'ITC Benguiat W01';
+        padding-top: 8px;
+    }
+        nav a:hover {
+            color: #ed2b12;
+
+            text-shadow: -0.08rem -0.08rem 1px #FABC88;
+
+        }
+
+
+img {
+    max-width: 100%;
+}
+
+.my-img {
+    max-width: 70%;
+    margin-left:15%;
+    margin-top:40px;
+    margin-bottom:40px;
+    height:auto;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    color: #ed2b12;
+    font-family: 'ITC Benguiat W01';
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: 2em;
+    text-transform: uppercase;
+    font-family: 'ITC Benguiat W01';
+    font-weight: 100;
+    color: #1c0502;
+    text-shadow: -0.05rem -0.05rem 1px #ed2b12, 0.05rem -0.05rem 1px #ed2b12, -0.05rem 0.05rem 1px #ed2b12, 0.05rem 0.05rem 1px #ed2b12, 0 0 15px #630100, 0 0 20px #450100;
+    letter-spacing: -2px;
+}
+
+
+
+h2 {
+    font-size: 1.8em;
+}
+
+h3 {
+    font-size: 1.6em;
+}
+
+h4 {
+    font-size: 1.4em;
+}
+
+h5 {
+    font-size: 1.2em;
+}
+
+h6 {
+    font-size: 1em;
+}
+
+
+ul {
+    padding-left: 0px;
+}
+
+nav li {
+    list-style-type: none;
+}
+
+
+
+section ul li {
+    list-style-type:circle;
+    margin-left:30px;
+}
+
+blockquote {
+    font-family: Arial;
+    font-size:0.8em;
+}
+
+
+
+}
+tr {
+    background-color: #5AB30A;
+    color:white;
+}
+
+
+
+/* LAYOUT - BOXES */
+.box {
+
+    text-align: left;
+    padding: 10px;
+}
+
+/* format for each box */
+/* BIG SCREEN - greater than 720 PX *********************************/
+@media screen and (min-width: 721px) {
+
+
+    .hole1 {
+        display: none;
+    }
+
+
+    .box1 {
+        background-image: url("../images/st_monster.jpg");
+        background-repeat: repeat-y;
+        background-attachment: fixed;
+        background-position: 0px 0px;
+    }
+
+
+    .box2 {
+        background: #01010D;
+        background-image: url("../images/st_monster.jpg");
+        background-attachment: fixed;
+        padding-top: 0px;
+        padding-left: 30px;
+        color: #1c0502;
+    }
+
+    .box3 {
+        background: #01010D;
+
+    }
+
+    .box4 {
+        background: #01010D;
+
+    }
+
+    .box5 {
+        background: #3D0500;
+    }
+
+
+    .box6 {
+        background: #3D0500;
+    }
+
+
+
+    .container {
+        display: grid;
+        /* Use the repeat function to repeat same sized columns */
+        grid-template-columns: 10px 150px 200px 1fr;
+        grid-auto-rows: 100px 1fr 100px;
+        grid-gap: 0px;
+        /* Note: use " . "  as a placeholder if you want
+       to leave one section of the grid blank */
+        grid-template-areas: "six two two two" 
+                             "six one three four" 
+                             "six one five five"
+    }
+}
+
+
+
+
+/* GRID AREA NAMES ************************/
+/* assign grid-area names to the items... */
+.box1 {
+    grid-area: one;
+
+    
+}
+
+.box2 {
+    grid-area: two;
+
+}
+
+.box3 {
+    grid-area: three;
+
+}
+
+.box4 {
+    grid-area: four;
+
+}
+
+.box5 {
+    grid-area: five;
+}
+
+.box6 {
+    grid-area: six;
+}
+
+
+
+
+
+
+
+/* format for each box */
+/* SMALL SCREEN - less than 720 PX *********************************/
+@media screen and (max-width: 720px) {
+
+
+    body {
+        font-size: 14px;
+    }
+    .container {
+        display: grid;
+
+        grid-template-columns: 1fr;
+        grid-auto-rows: 80px auto auto 100px;
+        grid-gap: 0px;
+        /* Note: use " . "  as a placeholder if you want
+       to leave one section of the grid blank */
+        grid-template-areas: "two"
+                             "three"
+                             "four"
+                             "five"
+                             "six"
+                              "one"
+
+    }
+  
+
+
+    .box1 {
+        display: none;
+        background-image: initial;
+    }
+
+
+    .box2 {
+        background: #01010D;
+        background-image: url("../images/st_monster.jpg");
+        background-attachment: fixed;
+        padding-top: 0px;
+        color: #1c0502;
+        text-align: center;
+    }
+
+    .box3 {
+        background: #01010D;
+        border-style: solid;
+        border-color: #3D0500;
+    }
+
+    .box4 {
+        background: #01010D;
+        border-style: solid;
+        border-color: #3D0500;
+    }
+
+    .box5 {
+        background: #3D0500;
+        color: #FFFED42;
+    }
+
+
+    .box6 {
+        display: none;
+    }
+
+
+
+    
+ }
+
+
+/**************     CLASSES         ****************************/
+.external {
+    text-decoration: underline;
+    color: #ed2b12;
+}
+
+        .external:hover {
+            color: white;
+        }
+
+
+    .textinput {
+        padding-right: 50px;
+        display: inline;
+        float: left;
+        font-size: 0.8em;
+        width: 300px;
+    }
+
+    .fa-cart-plus {
+        text-align: right;
+        margin-left: 320px;
+        margin-bottom: 20px;
+        color: #E2F7CC;
+    }
+
+        .fa-cart-plus:hover {
+            color: #91D93E;
+        }
+
+    .fa-search {
+        margin-left: 20px;
+    }
+
+
+    .fa-facebook-square {
+        color: #E2F7CC;
+        font-size: 1.5em;
+    }
+
+        .fa-facebook-square:hover {
+            color: #91D93E;
+        }
+
+
+
+
+.hole, .hole1 {
+    background-image: url("../images/st_monster.jpg");
+    background-attachment: fixed;
+    border-color: #3D0500;
+    border-radius: 16% 74% 36% 86% / 45% 74% 71% 85%;
+    -webkit-box-shadow: 0px 0px 30px 19px #6A0D05;
+    -moz-box-shadow: 0px 0px 30px 19px #6A0D05;
+    box-shadow: 0px 0px 30px 19px #6A0D05;
+    width: 80%;
+    height: 100px;
+    margin-top: 60px;
+    margin-bottom:60px;
+    margin-right:auto;
+    margin-left:auto;
+}
+
+
+
+
+
+/****************** SPINNING EFFECT ****************************************************************************/
+/****************** IMAGE EFFECT     ***************************************************************************/
+/****************** HOVER TO PAUSE   ***************************************************************************/
+
+
+
+
+@-webkit-keyframes spinner {
+    from {
+        -webkit-transform: rotateX(0deg);
+    }
+
+    to {
+        -webkit-transform: rotateX(-360deg);
+    }
+}
+
+/* all other browsers */
+@keyframes spinner {
+    from {
+        -moz-transform: rotateX(0deg);
+        -ms-transform: rotateX(0deg);
+        transform: rotateX(0deg);
+    }
+
+    to {
+        -moz-transform: rotateX(-360deg);
+        -ms-transform: rotateX(-360deg);
+        transform: rotateX(-360deg);
+    }
+}
+
+#stage {
+    margin: 1em auto;
+    -webkit-perspective: 1200px;
+    -moz-perspective: 1200px;
+    -ms-perspective: 1200px;
+    perspective: 1200px;
+}
+
+#spinner {
+    -webkit-animation-name: spinner;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 6s;
+    animation-name: spinner;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 6s;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+    #spinner:hover {
+        -webkit-animation-play-state: paused;
+        animation-play-state: paused;
+    }
