@@ -1,0 +1,190 @@
+﻿/* Homework 3 - Alternate CSS */
+/* Angela Neri */
+/* 2019-06-04 */
+
+/* Colors green=#9BCDCA
+        ligth green = #B9d9d8
+        pink (complementary) = #CD9B9E
+        beige = #CDCA9B
+        beige 2 = #F3F2F2
+        dark green = #79BCB8
+*/
+          
+
+/*
+--------------------------------
+HTML selectors
+--------------------------------
+*/
+body {
+    font-family: Tahoma, Geneva, sans-serif;
+    background-color: transparent;
+    background-image: url(../images/background.png);
+}
+
+
+h1{
+    font-size: 22pt;
+}
+
+h2, h3 {
+    color: #79BCB8;
+}
+
+
+
+h2 + p::first-letter {
+        font-size: 1.8em;
+        font-family:'Times New Roman', Times, serif;
+    }
+h2 {
+    text-align:center;
+}
+
+h3 + p::first-letter {
+        font-size: 1.8em;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+h3{
+    font-weight:bold;
+    font-size: 13pt;
+
+}
+
+
+/*HEADER*/
+
+body > div:first-of-type {
+    text-align: center;
+    background-color: #CDCA9B;
+    color: #F3F2F2;
+    padding: 5px;
+    margin-bottom: 0px;
+}
+
+
+
+/* FOOTER */
+body > div:last-of-type {
+    position: static;
+    padding: 0.5px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #CDCA9B;
+    color: white;
+    text-align: center;
+}
+
+/* PICTURES */
+img[src^="images/"] {
+    border-color: #B9d9d8;
+    border-style: solid;
+    width: 100%;
+}
+
+/*
+--------------------------------
+CLASS selectors
+--------------------------------
+*/
+.content {
+    background-color: #F3F2F2;
+    font-weight: lighter;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-color: #E6DDDD;
+    border-style: solid;
+    border-width: 1px;
+
+}
+
+.nav {
+    margin-top: 0px;
+    overflow: hidden;
+    background-color: #79BCB8;
+}
+
+.nav a{
+  float: left;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.nav a:hover{
+  background-color:rgba(133, 127, 127, 0.438);;
+  color: rgb(0, 0, 0);
+}
+
+
+
+.link {
+    color: #79BCB8;
+    text-decoration: none;
+}
+
+.link:hover{
+background-color: rgb(189, 152, 105);
+color:white
+}
+
+.link:active{
+  color: rgb(46, 33, 8);
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+.column {
+  float: left;
+  width: 33.3%;
+  padding: 5px;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+/*
+--------------------------------
+ID selectors
+--------------------------------
+*/
+#sidebar {
+    background-color: #ffffff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-color: #B9d9d8;
+    border-style: solid;
+    border-width: 6px;
+    border-left: none;
+    border-right: none;
+    position: relative;
+}
+
+#sidebar-p{
+  font-weight: light;
+  font-style: italic;
+  line-height: 20pt;
+}
+
+
+
+
+#wrapper{	
+	width:90%;
+	margin-right:auto;
+	margin-left:auto;
+	position:relative;
+	min-width:600px;
+}
