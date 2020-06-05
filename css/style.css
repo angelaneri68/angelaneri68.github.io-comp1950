@@ -1,0 +1,383 @@
+
+/* Angela Neri    - CSS Homework  01    */
+/* creation: 2019-04-17 */
+/* updated:  2019-05-28  */
+/* colors   #82B8C4 blue
+            #DED5C6 ligth brown
+            #BA4A29 Siena
+            #AD895C brown
+            #80ADB8 cadet blue
+            #3A3F45 dark gray
+            #EFEEEC white smoke
+*/
+
+/*
+--------------------------------
+HTML selectors
+--------------------------------
+*/
+
+body {
+    font-family: "verdana";
+    background-color: #DED5C6;
+    background-image: url("../images/background.png");
+}
+
+table {
+    width: 100%;
+    /* 
+	center a tag in the parent
+
+	*/
+    margin-left: auto;
+    margin-right: auto;
+    background-color: transparent;
+    /* remove gaps between cells... */
+      border-collapse: collapse;  
+
+}
+td {
+    text-align: center;
+    border-bottom-color: white;
+    border-bottom-style: solid;
+    height: 100px;
+}
+
+
+
+
+p { 
+    text-indent: 32px
+
+}
+h1 {
+    color: #3A3F45;
+    text-align: center;
+}
+h2 {
+    color: #3A3F45;
+    text-align: left;
+}
+h3 {
+    color: #3A3F45;
+    text-align: left;
+}
+h4 {
+    color: #3A3F45;
+    text-align: left;
+}
+h5 {
+    color: #3A3F45;
+    text-align: left;
+}
+h6 {
+    color: #3A3F45;
+    text-align: left;
+}
+
+    
+
+blockquote {
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 40px;
+    margin-right: 40px;
+    font-size:90%
+}
+dt {
+    font-weight: bold;
+    padding: 0 0 0.2em 0;
+}
+
+dd {
+    margin: 0;
+    padding: 0 0 0.9em 0;
+}
+
+
+ul {
+    list-style-type: none;
+    padding-left: 5px;
+}
+
+
+form {
+    border-color: #33C8F1;
+}
+
+/*
+--------------------------------
+CLASS selectors
+--------------------------------
+*/
+
+.center_p {
+    padding-bottom:5px;
+    padding-top:10px;
+    text-align:center
+
+}
+.top_align{
+	vertical-align:top;	
+}
+
+.center_align{
+    align-content:center
+}
+
+.tab_ident{
+    margin-left: 10px;
+}
+
+
+
+
+
+
+
+.bullet_list {
+    list-style-type: circle;
+    list-style-position: inside;
+}
+
+
+
+.nav_link {
+    display: block;
+    font-weight: bold;
+    font-size: 13.5px;
+    text-decoration: none;
+    background-color: transparent;
+    color: #EFEEEC;
+    /* 
+    background-color: #7C6F51;
+    color: #E1E7E0;
+    */
+    display: inline;
+    float: left;
+}
+
+
+    .nav_link:hover {
+        background-color: transparent;
+        color: #BA4A27;
+    }
+
+
+
+
+
+
+.int_link {
+    background-color: #DED5C6;
+    color: #80ADB8;
+    border-style:solid;
+    padding: 5px;
+}
+
+    .int_link:hover {
+        color: #3A3F45;
+        background-color: #EFEEEC;
+    }
+
+.ext_link {
+    color: #82B8C4;
+}
+
+    .ext_link:hover {
+        color: #3A3F45;
+    }
+
+
+.paragraf {
+    text-align:justify;
+}
+
+.inlinep {
+    display:inline;
+}
+
+.code_result {
+    border-style: solid;
+    color: #6AA4B0;
+    background-color: #E1E7E0;
+}
+
+
+.my_img {
+    width: 250px;
+    height: 316px;
+    margin-left:auto;
+    margin-right:auto;
+    align-content: center;
+    display:block;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.subcontend {
+    padding: 10px;
+    box-shadow: 0px 10px #82B8C4;
+    min-width: 300px;
+}
+
+.firstsubcontend{
+    border:none;
+}
+/*
+--------------------------------
+ID selectors
+--------------------------------
+*/
+#container {
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 900px;
+    width:90%;
+    background-color: #DED5C6;
+}
+
+#rigth_content {
+    position: fixed;
+    top: 98px;
+    right: 20px;
+    width: 150px;
+    background-color: #7C6F51;
+    color: #E1E7E0;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #61382A;
+    padding: 10px;
+
+    /* box model style */
+}
+
+
+#main_content {
+    position: relative;
+    margin-top: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: transparent;
+    padding: 10px;
+    color: #EFEEEC;
+}
+
+
+#gallery {
+    position:relative;
+    margin-right:auto;
+    margin-left:auto;
+    width:720px;
+
+}
+
+#left_content {
+    position: relative;
+    width: 288px;
+    top: 20px;
+    left: 0px;
+    padding-top: 10px;
+    margin-bottom:50px;
+    display:inline;
+    float:left;
+
+
+}
+
+
+#center_content {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+
+    min-width: 250px;
+    padding: 10px;
+    color: white;
+
+
+}
+
+#top_page {
+    position: relative;
+    min-width: 900px;
+    width:100%;
+    height: 80px;
+    top:10px;
+    background-color: #80ADB8;
+    background-repeat: no-repeat;
+}
+
+
+#menu_vert {
+    position: absolute;
+    top: 10px;
+    min-width: 900px;
+    width: 100%;
+    background-color: #80ADB8;
+    list-style-type: none;
+    margin-left: auto;
+    margin-rigth: auto;
+    padding: 0;
+    display: inline;
+    z-index: 2;
+    margin-right: 10px;
+}
+
+
+
+
+
+
+
+#header {
+    position: relative;
+    top: 0px;
+    left: 100px;
+    margin-top: 0px;
+    margin-right: 20px;
+    height: 50px;
+    width: 200px;
+    background-color: #80ADB8;
+    color: #E1E7E0;
+    text-align: center;
+    font-style: italic;
+    font-size: 150%;
+    padding-top: 2px;
+    padding-bottom: 8px;
+    z-index: 1;
+}
+
+#footer {
+    position: relative;
+    height: 50px;
+    color: #E1E7E0;
+    text-align: center;
+    left: 0px;
+    margin-right: 10px;
+    margin-top: 80px;
+    padding-top: 4px;
+    min-width: 900px;
+    width:100%;
+    height: 50px;
+    background-color: #80ADB8;
+    display:block;
+
+}
+
+
