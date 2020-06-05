@@ -1,0 +1,288 @@
+﻿/* RESET CSS    */
+@import url("normalize.css");
+
+@charset "utf-8";
+/* Angela Neri */
+/* 2019-06-09  */
+/* Homework 04 */
+
+/* colors
+    olive: #5AB30A
+    ligth green: #E2F7CC
+    steel blue:#35A3A1
+    yellow green: #91D93E
+    white:#FAFBFA
+    blue:#1D676E
+*/
+
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+
+body {
+    font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    width:94%;
+    margin-left:auto;
+    margin-right:auto;
+    color:black;
+    min-width:800px;
+}
+
+
+
+
+header {
+    font-size: 2em;
+ 
+    color: #E2F7CC;
+}
+
+footer{
+
+    text-align: right;
+    color: #E2F7CC;
+
+}
+
+
+
+nav {
+    font-size: 16px;
+    text-align:left;
+    padding-left:0px;
+
+}
+
+    nav a {
+        display: block;
+        font-weight: bold;
+        text-decoration: none;
+        color: #35A3A1;
+    }
+        nav a:hover {
+            color: #91D93E;
+        }
+
+
+
+
+img {
+    border-style: solid;
+    color: #91D93E;
+    width: 100px;
+    height: 100px;
+    box-sizing:initial;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+    color: #1D676E;
+}
+
+h1 {
+    font-size: 2.2em;
+}
+
+
+
+h2 {
+    font-size: 1.8em;
+}
+
+h3 {
+    font-size: 1.6em;
+}
+
+h4 {
+    font-size: 1.4em;
+}
+
+h5 {
+    font-size: 1.2em;
+}
+
+h6 {
+    font-size: 1em;
+}
+
+
+ul {
+    padding-left: 0px;
+}
+
+nav li {
+    list-style-type: none;
+}
+
+
+
+section ul li {
+    list-style-type:circle;
+    margin-left:30px;
+}
+
+blockquote {
+    font-family: Arial;
+    font-size:0.8em;
+}
+
+tr:nth-child(2n) {
+    background-color: #E2F7CC;
+
+}
+tr:nth-child(2n+1) {
+    background-color: #5AB30A;
+    color:white;
+}
+
+
+
+
+
+
+
+
+
+
+.box {
+    font-size: 16px;
+    text-align: left;
+    padding: 10px;
+}
+
+/* Colours for each box */
+.box1 {
+    background-image: url("../images/dna.jpg");
+    background-repeat:repeat-y;
+    background-attachment: fixed;
+
+    background-position:40px 0px;
+
+}
+
+.box2 {
+    background: #35A3A1;
+}
+
+.box3 {
+    background: #E2F7CC;
+}
+
+.box4 {
+    background: #FAFBFA;
+}
+
+.box5 {
+    background: #35A3A1;
+}
+
+
+.box6 {
+    background: #35A3A1;
+}
+
+.box7 {
+    background: #35A3A1;
+}
+
+.container {
+    display: grid;
+    /* Use the repeat function to repeat same sized columns */
+    grid-template-columns: 10px 150px 200px  1fr;
+    grid-auto-rows: 100px 1fr 100px;
+    grid-gap: 0px;
+    /* Note: use " . "  as a placeholder if you want
+       to leave one section of the grid blank */
+    grid-template-areas: "six two two seven" 
+                         "six one three four" 
+                         "six one five five" 
+
+}
+/* assign grid-area names to the items... */
+.box1 {
+    grid-area: one;
+    border-style: solid;
+    border-color: #35A3A1;
+}
+
+.box2 {
+    grid-area: two;
+    padding-top:0px;
+}
+
+.box3 {
+    grid-area: three;
+    border-style: solid;
+    border-color: #35A3A1;
+}
+
+.box4 {
+    grid-area: four;
+    border-style: solid;
+    border-color: #35A3A1;
+}
+
+.box5 {
+    grid-area: five;
+}
+
+.box6 {
+    grid-area: six;
+}
+
+
+.box7 {
+    grid-area: seven;
+    color: #E2F7CC;
+    font-size: 1.5em;
+}
+
+
+.external{
+    text-decoration:underline;
+    color: #35A3A1;
+}
+    .external:hover {
+        color: #91D93E;
+
+    }
+    
+
+.textinput {
+    padding-right: 50px;
+    display:inline;
+    float:left;
+    font-size:0.8em;
+    width:300px;
+}
+
+.fa-cart-plus {
+    text-align: right;
+    margin-left: 320px;
+    margin-bottom: 20px;
+    color: #E2F7CC;
+    
+}
+    .fa-cart-plus:hover {
+        color: #91D93E;
+
+    }
+
+.fa-search {
+    margin-left:20px;
+}
+
+
+.fa-facebook-square {
+    color: #E2F7CC;
+    font-size:1.5em;
+}
+    .fa-facebook-square:hover {
+        color: #91D93E;
+    }
+
